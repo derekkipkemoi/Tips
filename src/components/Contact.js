@@ -5,7 +5,6 @@ export default function Contact() {
   return (
     <div className="home">
       <div id="section3">
-        <a id="contact" class="js--wp-3" name="contact"></a>
         <div class="row">
           <div class="form-wrapper">
             <h1 class="contact-title">Contact</h1>
