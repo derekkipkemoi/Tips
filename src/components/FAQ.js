@@ -1,8 +1,7 @@
 import React from "react";
 
-import { Card, Typography } from "antd";
+import { Card} from "antd";
 import { Link } from "react-router-dom";
-const { Title } = Typography;
 
 export default function FAQ() {
   return (
