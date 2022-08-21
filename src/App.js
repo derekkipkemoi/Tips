@@ -2,13 +2,13 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Layout } from "antd";
-import Home from "./components/Home";
+import Home from "./Pages/Home";
 import FAQ from "./components/FAQ";
-import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
-import HowToPay from "./components/HowToPay";
-import PrivacyPolicy from "./components/PrivacyPolicy";
-import TermsConditions from "./components/TermsConditions";
+import HowToPayPage from "./Pages/HowToPayPage";
+import PrivacyPolicy from "./Pages/TermsConditions";
+import TermsConditions from "./Pages/TermsConditions";
+import ContactUs from "./Pages/ContactUs";
 const { Header, Content, Footer } = Layout;
 
 function App() {
@@ -24,8 +24,8 @@ function App() {
         >
           <Routes>
             <Route index element={<Home />} />
-            <Route path="/how_to_pay" element={<HowToPay />} />
-            <Route path="/contact_us" element={<Contact />} />
+            <Route path="/how_to_pay" element={<HowToPayPage />} />
+            <Route path="/contact_us" element={<ContactUs />} />
             <Route path="/privacy_policy" element={<PrivacyPolicy />} />
             <Route path="/terms_and_conditions" element={<TermsConditions />} />
             <Route path="/faq" element={<FAQ />} />

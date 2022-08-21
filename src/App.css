@@ -91,9 +91,26 @@
     max-width: 100%;
   }
 }
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 
 .home {
   text-align: center;
+  margin-top: 20px;
+}
+
+.how-to-buy{
+  height: 86vh;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-us{
+  height: 86vh;
   margin-top: 20px;
 }
 
@@ -102,3 +119,4 @@
   height: 50px;
   width: 100%;
 }
+

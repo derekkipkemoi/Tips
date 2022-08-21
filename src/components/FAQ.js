@@ -1,12 +1,18 @@
 import React from "react";
 
-import { Card } from "antd";
+import { Card, Typography } from "antd";
 import { Link } from "react-router-dom";
+const { Title } = Typography;
 
 export default function FAQ() {
   return (
     <div>
-      <h1>Frequently Asked Questions About Sure Bet Tips</h1>
+      <Card
+        bordered={false}
+        style={{ marginBottom: "10px", fontSize: " 20px", color: "#1890ff", marginTop:"20px" }}
+      >
+        Frequently Asked Questions About Sure Bet Tips
+      </Card>
       <Card
         title="How accurate are Predictions? "
         bordered={true}

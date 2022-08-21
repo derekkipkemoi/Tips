@@ -1,69 +1,92 @@
 import React from "react";
-import "./Contact.css";
+import { Button, Checkbox, Form, Input, Card, Typography } from "antd";
+const { Title } = Typography;
 
 export default function Contact() {
-  return (
-    <div className="home">
-      <div id="section3">
-        <div class="row">
-          <div class="form-wrapper">
-            <h1 class="contact-title">Contact</h1>
-            <div class="form-inner-wrapper">
-              <form
-                id="contactForm"
-                method="post"
-              >
-                <div class="field-list clear">
-                  <div id="name" class="form-item field email required">
-                    <label class="title" for="name">
-                      Name <span class="required">*</span>
-                    </label>
-                    <input
-                      class="field-element"
-                      name="name"
-                      x-autocompletetype="name"
-                      type="text"
-                      spellcheck="false"
-                    />
-                  </div>
+  const onFinish = (values) => {
+    console.log("Success:", values);
+  };
 
-                  <div id="email" class="form-item field email required">
-                    <label class="title" for="email">
-                      Email Address <span class="required">*</span>
-                    </label>
-                    <input
-                      class="field-element"
-                      name="email"
-                      x-autocompletetype="email"
-                      type="text"
-                      id="email-field"
-                    />
-                  </div>
-                  <div id="textarea" class="form-item field textarea required">
-                    <label class="title" for="textarea-field">
-                      Message <span class="required">*</span>
-                    </label>
-                    <textarea
-                      class="field-element"
-                      id="textarea--field"
-                      name="message"
-                    ></textarea>
-                  </div>
-                  <div id="contactResponse"></div>
-                  <div class="form-button-wrapper form-button-wrapper--align-center">
-                    <input
-                      class="button"
-                      type="submit"
-                      name="submit"
-                      value="Submit"
-                    />
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+  const onFinishFailed = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
+  return (
+    <div>
+      <Card
+        title={
+          <Title
+            style={{
+              marginBottom: "10px",
+              fontSize: " 24px",
+              color: "#1890ff",
+            }}
+            level={2}
+          >
+            Contact Us
+          </Title>
+        }
+        bordered={false}
+        style={{ marginBottom: "10px", fontSize: " 20px" }}
+      >
+        <Form
+          name="basic"
+          // labelCol={{ span: 8 }}
+          // wrapperCol={{ span: 16 }}
+          initialValues={{ remember: true }}
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+          autoComplete="off"
+        >
+          <Form.Item
+            label="Your Name"
+            name="name"
+            
+            rules={[{ required: true, message: "Please input your username!" }]}
+          >
+            <Input placeholder="Enter Name" style={{marginLeft: "15px"}}/>
+          </Form.Item>
+
+          <Form.Item
+            label="Your Email"
+            name="nmail"
+            
+            rules={[{ required: true, message: "Please input your email" }]}
+          >
+            <Input placeholder="Enter Email" style={{marginLeft: "15px"}}/>
+          </Form.Item>
+
+          <Form.Item
+            label="Subject"
+            name="subject"
+            
+            rules={[{ required: false }]}
+          >
+            <Input placeholder="Enter Subject" style={{marginLeft: "15px"}}/>
+          </Form.Item>
+          <Form.Item
+            label="Message"
+            name="message"
+            
+            rules={[{ required: false }]}
+          >
+            <Input.TextArea placeholder="Enter Message" style={{marginLeft: "15px"}}/>
+          </Form.Item>
+
+          <Form.Item
+            name="remember"
+            valuePropName="checked"
+            wrapperCol={{ offset: 8, span: 16 }}
+          >
+            <Checkbox>Remember me</Checkbox>
+          </Form.Item>
+
+          <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+            <Button type="primary" htmlType="submit">
+              Submit
+            </Button>
+          </Form.Item>
+        </Form>
+      </Card>
     </div>
   );
 }
