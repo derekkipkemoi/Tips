@@ -1,10 +1,8 @@
-.App {
-  text-align: center;
-}
+@import "~antd/dist/antd.css";
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.layout {
+  overflow-y: auto;
+  height: auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,10 +13,6 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -35,4 +29,76 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 476px) {
+  .container {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+@media (min-width: 476px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+    max-width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+    max-width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+    max-width: 100%;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1340px;
+    max-width: 100%;
+  }
+}
+
+.home {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-links{
+  background-color: #282c34;
+  height: 50px;
+  width: 100%;
 }
